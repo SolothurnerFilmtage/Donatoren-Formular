@@ -98,7 +98,7 @@ if ($_POST) {
                             <label for="strasse">Adresse</label>
                             <input type="text" class="form-control top-in-group" name="Strasse_1" id="strasse" placeholder="Strasse" value="<?php echo value_if_post('Strasse_1');?>">
                             <input type="text" class="form-control middle-in-group" name="PLZ" id="plz" placeholder="PLZ" value="<?php echo value_if_post('PLZ');?>">
-                            <input type="text" class="form-control bottom-in-group" name="Ort" id="ort" placeholder="ORT" value="<?php echo value_if_post('Ort');?>">
+                            <input type="text" class="form-control bottom-in-group" name="Ort" id="ort" placeholder="Ort" value="<?php echo value_if_post('Ort');?>">
                         </div>
                         <div class="form-group">
                             <label for="vorname">Ansprechperson*</label>
