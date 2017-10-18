@@ -27,6 +27,8 @@ if ($_POST) {
 ?>
 
 
+
+
 <!DOCTYPE html>
 <html lang="de">
     <head>
@@ -42,7 +44,7 @@ if ($_POST) {
         <!-- Custom styles for this template -->
         <style>
 
-        </style> 
+        </style>
         <!-- <link href="navbar-top.css" rel="stylesheet"> -->
 
         <link rel="stylesheet" href="css/donatoren.css" type="text/css">
@@ -52,7 +54,7 @@ if ($_POST) {
     <body>
         <div class="container" style="max-width: 640px; padding-top: 30px; margin-bottom: 100px;">
 
-            <?php 
+            <?php
 
             if(isset($status)) {
 
@@ -65,7 +67,7 @@ if ($_POST) {
                 $error_div = '<div class="row">';
                 $error_div .= '<div class="col-1"></div>';
                 $error_div .= "<div class='col-10 alert $alert_type'>";
-                $error_div .= $status_message;    
+                $error_div .= $status_message;
                 $error_div .= '</div>';
                 $error_div .= '<div class="col-1"></div>';
                 $error_div .= '</div>';
@@ -75,7 +77,7 @@ if ($_POST) {
                 if ($status=="success") {
                     exit;
                 }
-            } 
+            }
 
             ?>
 
@@ -84,8 +86,8 @@ if ($_POST) {
                 <div class="col-1"></div>
                 <div class="col-10">
                     <h2>Donatoren-Formular</h2>
-                    <p>Wenn Sie bzw. ihre Firma/Organisation Donator der Solothurner Filmtage werden möchten, 
-                        füllen Sie bitte das untenstehende Formular aus. Bei Fragen stehen wir Ihnen gerne zur Verfügung. 
+                    <p>Wenn Sie bzw. ihre Firma/Organisation Donator der Solothurner Filmtage werden möchten,
+                        füllen Sie bitte das untenstehende Formular aus. Bei Fragen stehen wir Ihnen gerne zur Verfügung.
                     </p>
                     <p>Felder mit einem * sind Pflichtangaben.
                     </p>
@@ -108,7 +110,7 @@ if ($_POST) {
                         <div class="form-group">
                             <label for="vorname">Kontakt*</label>
                             <input type="tel" class="form-control top-in-group" name="Tel" id="telefon" placeholder="Telefon" value="<?php echo value_if_post('Tel');?>">
-                            <input type="email" class="form-control bottom-in-group <?php echo warning_class_if_invalid('Mail', $validation_error_array); ?>" name="Mail" id="email" placeholder="Email" value="<?php echo value_if_post('Mail');?>" required>                            
+                            <input type="email" class="form-control bottom-in-group <?php echo warning_class_if_invalid('Mail', $validation_error_array); ?>" name="Mail" id="email" placeholder="Email" value="<?php echo value_if_post('Mail');?>" required>
                         </div>
 
                         <hr>
@@ -178,7 +180,7 @@ if ($_POST) {
                                     Nein
                                 </label>
                             </div>
-                        </div>                    
+                        </div>
 
                         <hr>
 
@@ -222,7 +224,7 @@ if ($_POST) {
                                 <div class="input-group" style="padding-left: 5%;">
                                     <span class="input-group-addon bottom-in-group">Anzahl Programmhefte</span>
                                     <input type="number" id="programmhefte-anzahl" class="form-control bottom-in-group" name="Donatoren_Restaurants_Programmhefte_Anzahl" value='<?php echo value_if_post("Donatoren_Restaurants_Programmhefte_Anzahl"); ?>' disabled>
-                                </div>  
+                                </div>
 
                             </div>
 
@@ -235,35 +237,35 @@ if ($_POST) {
                             <div class="form-check">
                                 <label class="form-check-label">
                                     <input type="checkbox" class="form-check-input" name="Donatoren_Restaurants_Schaufenster_Flag" value="1" <?php echo checked("Donatoren_Restaurants_Schaufenster_Flag", "1"); ?>>
-                                    Wir möchten unser Schaufenster im Auftritt der Solothurner Filmtage gestalten lassen (kostenlos). 
+                                    Wir möchten unser Schaufenster im Auftritt der Solothurner Filmtage gestalten lassen (kostenlos).
                                 </label>
-                            </div>                            
+                            </div>
                             <div class="form-check">
                                 <label class="form-check-label">
                                     <input type="checkbox" id="bier" class="form-check-input" name="Donatoren_Restaurants_AbspannBier_Flag" value="1" <?php echo checked("Donatoren_Restaurants_AbspannBier_Flag", "1"); ?>>
-                                    Wir möchten während den Filmtagen das Filmtage-Bier «Abspann» (Öufi Brauerei) ausschenken (auf eigene Rechnung). 
+                                    Wir möchten während den Filmtagen das Filmtage-Bier «Abspann» (Öufi Brauerei) ausschenken (auf eigene Rechnung).
                                 </label>
                             </div>
                             <div class="bier-optionen" style="display: none;">
                                 <div class="form-check push-right">
                                     <label class="form-check-label">
                                         <input type="checkbox" class="form-check-input" name="Donatoren_Restaurants_AbspannBier_Flaschen_Flag" value="1" <?php echo checked("Donatoren_Restaurants_AbspannBier_Flaschen_Flag", "1"); ?>>
-                                        33 cl Flaschen 
+                                        33 cl Flaschen
                                     </label>
                                 </div>
                                 <div class="form-check push-right">
                                     <label class="form-check-label">
                                         <input type="checkbox" class="form-check-input" name="Donatoren_Restaurants_AbspannBier_Offenausschank_Flag" value="1" <?php echo checked("Donatoren_Restaurants_AbspannBier_Offenausschank_Flag", "1"); ?>>
-                                        Offenausschank 
+                                        Offenausschank
                                     </label>
-                                </div>                                                          
+                                </div>
                             </div>
-                        </div>                        
+                        </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-                </div>  
-                <div class="col-1"></div>                  
+                </div>
+                <div class="col-1"></div>
 
 
             </div> <!-- row end -->
@@ -294,11 +296,11 @@ if ($_POST) {
                         $(this).attr('disabled', false);
                     }
                 });
-                
+
                 if ($('#bier').is(':checked')) {
                     $('.bier-optionen').show();
                 }
-            }) 
+            })
 
 
             /* Betrag und Publizierung verbergen und disablen, wenn nicht Donator */
@@ -307,7 +309,7 @@ if ($_POST) {
                     $('#betrag-500').attr('disabled',true);
                     $('#betrag-1000').attr('disabled',true);
                     $('#betrag-2000').attr('disabled',true);
-                    $('#betrag-custom').attr('disabled',true);                
+                    $('#betrag-custom').attr('disabled',true);
                     $('.betrag-group').hide();
                     $('.publi-group').hide();
                     $('.restaurant-group').hide();
@@ -316,7 +318,7 @@ if ($_POST) {
                     $('#betrag-500').attr('disabled',false);
                     $('#betrag-1000').attr('disabled',false);
                     $('#betrag-2000').attr('disabled',false);
-                    $('#betrag-custom').attr('disabled',false);                
+                    $('#betrag-custom').attr('disabled',false);
                     $('.publi-group').show();
                     $('.restaurant-group').show();
                 }
@@ -328,7 +330,7 @@ if ($_POST) {
             $('.betrag-group').on('click', function() {
                 if ($('#betrag-custom').is(':checked')) {
                     $('#betrag-custom-input').attr('disabled',false);
-                    $('#betrag-custom-input').attr('required',true);                    
+                    $('#betrag-custom-input').attr('required',true);
                 } else {
                     $('#betrag-custom-input').attr('disabled',true);
                 }
@@ -353,13 +355,13 @@ if ($_POST) {
                 if ($('#zuckersachets').is(':checked')) {
                     $('#zuckersachets-anzahl').attr('disabled', false);
                 } else {
-                    $('#zuckersachets-anzahl').attr('disabled', true);                        
+                    $('#zuckersachets-anzahl').attr('disabled', true);
                 }
 
                 /* Plakate / Programmhefte */
                 if ($('#plakate-programmhefte').is(':checked')) {
                     $('#plakate-anzahl').attr('disabled', false);
-                    $('#programmhefte-anzahl').attr('disabled', false);                        
+                    $('#programmhefte-anzahl').attr('disabled', false);
                 } else {
                     $('#plakate-anzahl').attr('disabled', true);
                     $('#programmhefte-anzahl').attr('disabled', true);
